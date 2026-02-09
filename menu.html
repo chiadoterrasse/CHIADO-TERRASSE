@@ -28,6 +28,16 @@
   <button onclick="setLang('es')">🇪🇸</button>
   <button onclick="setLang('it')">🇮🇹</button>
   <button onclick="setLang('de')">🇩🇪</button>
-</div>
+</div><script>
+function setLang(lang) {
+  document.querySelectorAll('[data-lang]').forEach(section => {
+    section.style.display =
+      section.getAttribute('data-lang') === lang ? 'block' : 'none';
+  });
+}
+
+// default language
+setLang('pt');
+</script>
 </body>
 </html>
